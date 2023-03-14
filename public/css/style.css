@@ -1,0 +1,64 @@
+*{
+    font-family: 'Rubik', sans-serif;
+    background-color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    position: center;
+    margin-bottom: 5px;
+}
+
+nav ul{
+    display: flex;
+    padding: 0;
+}
+
+nav li{
+    padding-right: 15px;
+    list-style: none;
+}
+
+header{
+    margin:15px;
+    text-align: center;
+    height: 7em;
+    vertical-align: middle;
+}
+
+main{
+    margin:15px;
+}
+
+.element{
+    position: relative;
+    height: 700px;
+    padding:50px;
+    background-color: midnightblue;
+    border-radius: 3em;
+    color: whitesmoke;
+    text-align: center;
+ }
+
+.test{
+    height: 700px;
+    padding:50px;
+    background-color: midnightblue;
+    border-radius: 3em;
+    color: whitesmoke;
+    text-align: center;
+}
+
+footer{
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: gray;
+
+    margin-right:15px;
+    margin-left:15px;
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    left:0; right:0;
+
+}
