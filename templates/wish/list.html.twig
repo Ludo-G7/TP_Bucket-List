@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+    {% block body %}
+        <h1>Wish list</h1>
+
+        <div class="element">
+            <h4>Liste de chose à faire :</h4><br>
+
+                <li>obtenir un stage</li>
+                <li>faire le tour du monde</li>
+                <li>avoir son titre</li>
+
+        </div>
+
+    {% endblock %}
+
+
+    {% block title %}
+        {{ parent() }} | Wish list
+
+    {% endblock %}
