@@ -5,13 +5,14 @@
         <h1>Wish list</h1>
 
         <div class="element">
-            <h4>Liste de chose à faire :</h4><br>
+            <h2>Liste de choses à faire avant de mourrir :</h2><br>
 
-                <li>obtenir un stage</li>
-                <li>faire le tour du monde</li>
-                <li>avoir son titre</li>
-
+            {% for i in idees %}
+                    <li><a class="desc" href="{{ path('wish_details', {'id': i.id}) }}">{{ i.title }}</a></li><br>
+            {% endfor %}
         </div>
+
+
 
     {% endblock %}
 
