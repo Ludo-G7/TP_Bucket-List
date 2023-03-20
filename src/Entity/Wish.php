@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\WishRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: WishRepository::class)]
 class Wish
@@ -14,10 +15,14 @@ class Wish
     #[ORM\Column]
     private ?int $id = null;
 
+    #[Assert\Length(min:"4", max:"250",
+        minMessage: 'Titre du souhait trop court',
+        maxMessage: 'Titre du souhait trop long')]
     #[ORM\Column(length: 250, nullable: true)]
     private ?string $title = null;
 
-    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank([],'La description ne peut pas être nulle')]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
     #[ORM\Column(length: 50, nullable: true)]

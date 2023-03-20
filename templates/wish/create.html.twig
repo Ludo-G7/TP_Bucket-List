@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} | Création souhait
+{% endblock %}
+
+
+
+{% block body %}
+    <h1>Creation Wish</h1>
+
+    <div class="element">
+        <div class="afficheForm">
+            {{ form_start(wishForm) }}
+            <div class="formulaire">
+                {{ form_label(wishForm.title) }}
+                : <br>{{ form_widget(wishForm.title) }}
+                {{ form_errors(wishForm.title) }}
+            </div>
+            <br>
+            <div class="formulaire">
+                {{ form_label(wishForm.description) }}
+                : <br>{{ form_widget(wishForm.description) }}
+                {{ form_errors(wishForm.description) }}
+            </div>
+            <br>
+            <div class="formulaire">
+                {{ form_label(wishForm.author) }}
+                : <br>{{ form_widget(wishForm.author) }}
+                {{ form_errors(wishForm.author) }}
+            </div>
+            <br>
+            <button class="btn_envoyer">Envoyer</button>
+            {{ form_end(wishForm)}}
+        </div>
+    </div>
+
+{% endblock %}
+
