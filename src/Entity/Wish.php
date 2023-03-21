@@ -18,10 +18,11 @@ class Wish
     #[Assert\Length(min:"4", max:"250",
         minMessage: 'Titre du souhait trop court',
         maxMessage: 'Titre du souhait trop long')]
+    #[Assert\NotBlank(message: 'Le titre ne peut pas être nul')]
     #[ORM\Column(length: 250, nullable: true)]
     private ?string $title = null;
 
-    #[Assert\NotBlank([],'La description ne peut pas être nulle')]
+    #[Assert\NotBlank(message: 'La description ne peut pas être nulle')]
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
