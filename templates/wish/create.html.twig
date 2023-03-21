@@ -12,24 +12,19 @@
     <div class="element">
         <div class="afficheForm">
             {{ form_start(wishForm) }}
-            <div class="formulaire">
-                {{ form_label(wishForm.title) }}
-                : <br>{{ form_widget(wishForm.title) }}
-                {{ form_errors(wishForm.title) }}
-            </div>
-            <br>
-            <div class="formulaire">
-                {{ form_label(wishForm.description) }}
-                : <br>{{ form_widget(wishForm.description) }}
-                {{ form_errors(wishForm.description) }}
-            </div>
-            <br>
-            <div class="formulaire">
-                {{ form_label(wishForm.author) }}
-                : <br>{{ form_widget(wishForm.author) }}
-                {{ form_errors(wishForm.author) }}
-            </div>
-            <br>
+
+            <div class="label">{{ form_label(wishForm.title) }} :</div>
+            <div class="descForm">{{ form_widget(wishForm.title) }}</div>
+            {{ form_errors(wishForm.title) }}
+
+            <div class="label">{{ form_label(wishForm.description) }} :</div>
+            <div class="descForm">{{ form_widget(wishForm.description) }}</div>
+            {{ form_errors(wishForm.description) }}
+
+            <div class="label">{{ form_label(wishForm.author) }} :</div>
+            <div class="descForm">{{ form_widget(wishForm.author) }}</div>
+            {{ form_errors(wishForm.author) }}
+
             <button class="btn_envoyer">Envoyer</button>
             {{ form_end(wishForm)}}
         </div>

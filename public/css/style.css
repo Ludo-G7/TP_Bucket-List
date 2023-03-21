@@ -73,35 +73,43 @@ main{
 }
 
 .afficheForm{
-    background-color: #B0413E;
-    width: auto;
-    height: auto;
-}
-.formulaire{
-    margin-left:300px;
-    margin-right:300px;
-    height: 80px;
-    background-color: darkslategrey;
+    display: flex;
+    justify-content: center;
+    padding-left:150px;
+    padding-right:150px;
     text-align: left;
 }
 
-.formulaire input{
-
+.descForm input{
+    margin: auto;
+    width: 60vw;
+    height: 3em;
+    border:none;
+    /*border: 1px solid deepskyblue;*/
+    border-radius: 5px;
+    padding-bottom: 10px;
 }
-
-.formulaire label{
+.descForm input:focus{
+    box-shadow: 1px 1px 7px whitesmoke;
+    border-color: #93c5fd;
+}
+.label{
     font-size: 1.2em;
+    padding-top: 30px;
+    padding-bottom: 5px;
 }
-
-
 .btn_envoyer{
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 150px;
-    height: 30px;
+    height: 40px;
+    border:none;
     border-radius: 10px;
 }
 .btn_envoyer:hover{
     background-color: darkgray;
 }
+
 
 .textLorem{
     grid-column: 3;
