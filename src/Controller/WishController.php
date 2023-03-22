@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Entity\Wish;
 use App\Form\WishType;
 use App\Repository\WishRepository;
@@ -85,4 +86,11 @@ class WishController extends AbstractController
             'wishForm'=>$wishForm->createView()
         ]);
     }
+
+
+
+
+
+
+
 }

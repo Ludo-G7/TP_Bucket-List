@@ -25,6 +25,14 @@
             <div class="descForm">{{ form_widget(wishForm.author) }}</div>
             {{ form_errors(wishForm.author) }}
 
+            {% for category in wishForm.category %}
+                <article>
+                    <div>{{ wishForm.category.name }}</div>
+                </article>
+            {% endfor %}
+
+
+
             <button class="btn_envoyer">Envoyer</button>
             {{ form_end(wishForm)}}
         </div>
