@@ -14,28 +14,28 @@
             {{ form_start(wishForm) }}
 
             <div class="label">{{ form_label(wishForm.title) }} :</div>
-            <div class="descForm">{{ form_widget(wishForm.title) }}</div>
+            <div class="detailForm">{{ form_widget(wishForm.title) }}</div>
             {{ form_errors(wishForm.title) }}
 
             <div class="label">{{ form_label(wishForm.description) }} :</div>
-            <div class="descForm">{{ form_widget(wishForm.description) }}</div>
+            <div class="detailForm">{{ form_widget(wishForm.description) }}</div>
             {{ form_errors(wishForm.description) }}
 
             <div class="label">{{ form_label(wishForm.author) }} :</div>
-            <div class="descForm">{{ form_widget(wishForm.author) }}</div>
+            <div class="detailForm">{{ form_widget(wishForm.author) }}</div>
             {{ form_errors(wishForm.author) }}
 
-            {% for category in wishForm.category %}
-                <article>
+            <div class="test">
+                {% for category in wishForm.category %}
                     <div>{{ wishForm.category.name }}</div>
-                </article>
-            {% endfor %}
-
-
+                {% endfor %}
+            </div>
 
             <button class="btn_envoyer">Envoyer</button>
             {{ form_end(wishForm)}}
         </div>
+
+
     </div>
 
 {% endblock %}

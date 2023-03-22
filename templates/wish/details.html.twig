@@ -5,12 +5,12 @@
         <h1>Wish : {{ wish.title }}</h1>
 
         <div class="element1">
-            <h2 class="desc1">Souhait : {{ wish.title }}</h2>
+            <h2 class="titreDetailH2">Wish : {{ wish.title }}</h2>
 
-            <div class="desc1"><li>Description : {{ wish.description }}</li></div><br>
-            <div class="desc1"><li>Author : {{ wish.author }}</li></div><br>
-            <div class="desc1"><li>Date : {{ wish.dateCreated.format('d-m-Y - H:m') }}</li></div><br>
-
+            <div class="detailWish"><li>Description : {{ wish.description }}</li></div><br>
+            <div class="detailWish"><li>Author : {{ wish.author }}</li></div><br>
+            <div class="detailWish"><li>Date : {{ wish.dateCreated.format('d-m-Y - H:m') }}</li></div><br>
+            <div class="detailWish"><li>Category : {{ wish.category.name}}</li></div><br>
         </div>
 
 

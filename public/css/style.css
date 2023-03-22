@@ -4,7 +4,6 @@
 
 h1{
     text-align: center;
-    position: center;
     margin-bottom: 1.6em;
 }
 
@@ -60,16 +59,28 @@ main{
     text-align: center;
 }
 
-.element li, h2, .desc{
+.titreDetailH2{
+    font-size: 2em;
+    text-align: start;
+}
+
+.test{
+    font-size: 3em;
+    height: 50px;
+}
+
+.element li, .listWish{
     background-color: midnightblue;
     text-align: start;
     color:whitesmoke;
+    font-size: 1.2em;
 }
 
-.element1 li, .desc1 h2, .desc1  {
+.element1 li, .detailWish  {
     background-color: darkgoldenrod;
     text-align: start;
     color:whitesmoke;
+    font-size: 1.2em;
 }
 
 .afficheForm{
@@ -80,7 +91,7 @@ main{
     text-align: left;
 }
 
-.descForm input{
+.detailForm input{
     margin: auto;
     width: 60vw;
     height: 3em;
@@ -89,7 +100,7 @@ main{
     border-radius: 5px;
     padding-bottom: 10px;
 }
-.descForm input:focus{
+.detailForm input:focus{
     box-shadow: 1px 1px 7px whitesmoke;
     border-color: #93c5fd;
 }

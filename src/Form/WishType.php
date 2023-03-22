@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\Wish;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -23,7 +24,7 @@ class WishType extends AbstractType
             ->add('author')
 
             ->add('category', EntityType::class, [
-                'class'=>Wish::class,
+                'class'=>Category::class,
                 'choice_label'=>'name'
             ])
         ;
