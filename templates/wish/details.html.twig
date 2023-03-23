@@ -10,8 +10,26 @@
             <div class="detailWish"><li>Description : {{ wish.description }}</li></div><br>
             <div class="detailWish"><li>Author : {{ wish.author }}</li></div><br>
             <div class="detailWish"><li>Date : {{ wish.dateCreated.format('d-m-Y - H:m') }}</li></div><br>
-            <div class="detailWish"><li>Category : {{ wish.category.name}}</li></div><br>
+            <div class="detailWish"><li>Category : {{ wish.category ? wish.category.name : ''}}</li></div><br>
+
+            {# Bouton suppression #}
+            <div class="case_btn">
+                <form action="{{ path('wish_delete', {'id':wish.id}) }}">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete'~wish.id) }}">
+                    <button class="btn_delete">Delete</button>
+                </form>
+
+                <form action="{{ path('wish_list') }}">
+                    <button class="btn_retour">Retour</button>
+                </form>
+            </div>
+
+
+
+
         </div>
+
+
 
 
     {% endblock %}

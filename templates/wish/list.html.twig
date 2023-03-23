@@ -8,7 +8,7 @@
             <h2 class="titreDetailH2">Liste de choses à faire avant de mourrir :</h2><br>
 
             {% for i in idees %}
-                    <li><a class="listWish" href="{{ path('wish_details', {'id': i.id}) }}">{{ i.title }} | {{ i.category.name }}</a></li><br>
+                    <li><a class="listWish" href="{{ path('wish_details', {'id': i.id}) }}">{{ i.title }} | {{ i.category ? i.category.name : '' }}</a></li><br>
             {% endfor %}
         </div>
 

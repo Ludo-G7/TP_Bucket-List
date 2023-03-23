@@ -18,8 +18,9 @@ class WishController extends AbstractController
     #[Route("/list", name:"list")]
     public function list(WishRepository $wishRepository):Response
     {
-        $idees = $wishRepository->findAll();
-        //$idees = $wishRepository->findBy(['isPublished' => false], ['dateCreated'=> 'DESC']);
+        //$idees = $wishRepository->findAll();
+        //$idees = $wishRepository->findBy(['isPublished' => true], ['dateCreated'=> 'DESC']);
+        $idees = $wishRepository->findWishesWithCategory();
         return $this->render('wish/list.html.twig', [
                 'idees'=>$idees
     ]);
@@ -37,6 +38,7 @@ class WishController extends AbstractController
         ]);
     }
 
+    /*
     #[Route('/detailsId', name:'detailsId')]
     public function details(EntityManagerInterface $entityManager)
     {
@@ -64,6 +66,7 @@ class WishController extends AbstractController
 
         return $this->render('wish/details.html.twig');
     }
+    */
 
     #[Route('/create', name:'create')]
     public function create(Request $request, EntityManagerInterface $entityManager) :Response
@@ -87,10 +90,18 @@ class WishController extends AbstractController
         ]);
     }
 
-
-
-
-
+    #[Route('/delete/{id}', name:'delete')]
+    public function delete(Wish $wish,
+                            Request $request,
+                            WishRepository $wishRepository,
+                            EntityManagerInterface $entityManager)
+    {
+        if($this->isCsrfTokenValid('delete'.$wish->getId(), $request->get('_token'))){
+            $entityManager->remove($wish);
+            $entityManager->flush();
+        }
+        return $this->redirectToRoute('wish_list');
+    }
 
 
 }

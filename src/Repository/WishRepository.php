@@ -40,6 +40,22 @@ class WishRepository extends ServiceEntityRepository
         }
     }
 
+    /**
+     * @return Wish[] Returns an array of Wish objects
+     */
+    public function findWishesWithCategory(): array
+    {
+        return $this->createQueryBuilder('t')
+            ->leftJoin('t.category', 'c')
+            ->addSelect('c')
+            ->andWhere('t.isPublished = true')
+            ->orderBy('t.dateCreated', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+
 //    /**
 //     * @return Title[] Returns an array of Title objects
 //     */

@@ -64,10 +64,6 @@ main{
     text-align: start;
 }
 
-.test{
-    font-size: 3em;
-    height: 50px;
-}
 
 .element li, .listWish{
     background-color: midnightblue;
@@ -81,6 +77,62 @@ main{
     text-align: start;
     color:whitesmoke;
     font-size: 1.2em;
+}
+
+.case_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 50px;
+    line-height: 50px;
+}
+.case_btn_create{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.btn_delete{
+    height: 40px;
+    width: 150px;
+    margin-right: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    border: none;
+    transition-duration: 1s, 1s;
+}
+.btn_delete:hover{
+    cursor: pointer;
+    transition-duration: 1.5s, 1.5s;
+    height: 50px;
+    width: 200px;
+    background-color: crimson;
+    box-shadow: 0px 1px 10px 1px rgb(105,105,105,10);
+}
+
+.modif_btn_retour_create{
+    font-size: 1.1em;
+    color: black;
+}
+.btn_retour{
+    height: 40px;
+    width: 150px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    border: none;
+    transition-duration: 1s, 1s;
+}
+.btn_retour:hover{
+    cursor: pointer;
+    transition-duration: 1.5s, 1.5s;
+    height: 50px;
+    width: 200px;
+    background-color: darkgray;
+    box-shadow: 0px 1px 10px 1px rgb(105,105,105,10);
 }
 
 .afficheForm{
@@ -110,15 +162,22 @@ main{
     padding-bottom: 5px;
 }
 .btn_envoyer{
-    margin-top: 30px;
     margin-bottom: 30px;
+    margin-right: 20px;
     width: 150px;
     height: 40px;
     border:none;
-    border-radius: 10px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition-duration: 1s, 1s;
 }
 .btn_envoyer:hover{
-    background-color: darkgray;
+    cursor: pointer;
+    transition-duration: 1.5s, 1.5s;
+    height: 50px;
+    width: 200px;
+    background-color: limegreen;
+    box-shadow: 0px 1px 10px 1px rgb(105,105,105,10);
 }
 
 
