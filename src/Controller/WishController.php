@@ -78,6 +78,8 @@ class WishController extends AbstractController
         if($wishForm->isSubmitted() && $wishForm->isValid()){
             $wish->setIsPublished(true);
             $wish->setDateCreated(new \DateTime('now'));
+            //Valorise l'auteur du souhait avec le user connecté
+            $wish->setAuthor($this->getUser()->getUserIdentifier());
             $entityManager->persist($wish);
             $entityManager->flush();
 

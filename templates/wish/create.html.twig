@@ -20,9 +20,6 @@
             <div class="detailForm">{{ form_widget(wishForm.description) }}</div>
             {{ form_errors(wishForm.description) }}
 
-            <div class="label">{{ form_label(wishForm.author) }} :</div>
-            <div class="detailForm">{{ form_widget(wishForm.author) }}</div>
-            {{ form_errors(wishForm.author) }}
 
             <div class="detailForm">
                 {% for category in wishForm.category %}

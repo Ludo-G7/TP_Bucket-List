@@ -7,6 +7,10 @@ h1{
     margin-bottom: 1.6em;
 }
 
+.textAccueil{
+    text-align: left;
+}
+
 nav ul{
     display: flex;
     padding: 0;
@@ -17,6 +21,14 @@ nav li{
     list-style: none;
     text-decoration: none;
     font-size: 1em;
+}
+
+.case_pseudo{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    right: 10px;
+
 }
 
 a{
@@ -44,7 +56,6 @@ main{
     background-color: midnightblue;
     border-radius: 3em;
     color: whitesmoke;
-    text-align: center;
  }
 
 .element1{
@@ -56,7 +67,6 @@ main{
     background-color: darkgoldenrod;
     border-radius: 3em;
     color: whitesmoke;
-    text-align: center;
 }
 
 .titreDetailH2{
@@ -190,7 +200,6 @@ main{
     background-color: darkgoldenrod;
     border-radius: 3em;
     color: whitesmoke;
-    text-align: center;
 }
 
 .textLorem2{
@@ -202,7 +211,7 @@ main{
     background-color: brown;
     border-radius: 3em;
     color: whitesmoke;
-    text-align: center;
+
 }
 
 .general{
